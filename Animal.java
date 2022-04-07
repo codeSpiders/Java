@@ -1,7 +1,8 @@
-package cn.hengyan.day08;
+package cn.hengyan.day10;
 
 public class Animal {
-	public void eat() {
-		System.out.println("动物吃东西");
+	public  void breath() {
+		System.out.println("Animal's breath.");
 	}
+
 }
