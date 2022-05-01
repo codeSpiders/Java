@@ -6,8 +6,8 @@ import java.util.Map;
 public class ObjectTest {
 	public static void main(String[] args) {
 		Class cl =new ObjectTest().getClass();
-		//ObjectTestÊÇObjectµÄ×ÓÀà£¬ObjectTestµ÷ÓÃ¸¸ÀàObjectµÄgetClass·½·¨
-		//µÃµ½Ò»¸öClassÀàµÄÊµÀı
+		//ObjectTestæ˜¯Objectçš„å­ç±»ï¼ŒObjectTestè°ƒç”¨çˆ¶ç±»Objectçš„getClassæ–¹æ³•
+		//å¾—åˆ°ä¸€ä¸ªClassç±»çš„å®ä¾‹
 		
 		ObjectTest obt=new ObjectTest();
 		System.out.println(obt);
@@ -23,9 +23,9 @@ public class ObjectTest {
 		System.out.println(s1.equals(s2));
 		System.out.println(map1.get(s1));
 		System.out.println(map1.get(s2));
-		//StringÀà¼ÈÖØĞ´ÁËequals·½·¨£¬Ò²ÖØĞ´ÁËhashcode·½·¨£¬¼¯ºÏÖĞÊÇÓÃhashcode
-		//·½·¨Í¨¹ı¼üÈ¡Öµ¡£s1ºÍs2ÔÚÄÚ´æÖĞÎ»ÖÃ²»Í¬£¬hashcode±¾À´²»Í¬£¬µ«ÊÇStringÀàÖØĞ´ÁË
-		//hashcode·½·¨
+		//Stringç±»æ—¢é‡å†™äº†equalsæ–¹æ³•ï¼Œä¹Ÿé‡å†™äº†hashcodeæ–¹æ³•ï¼Œé›†åˆä¸­æ˜¯ç”¨hashcode
+		//æ–¹æ³•é€šè¿‡é”®å–å€¼ã€‚s1å’Œs2åœ¨å†…å­˜ä¸­ä½ç½®ä¸åŒï¼Œhashcodeæœ¬æ¥ä¸åŒï¼Œä½†æ˜¯Stringç±»é‡å†™äº†
+		//hashcodeæ–¹æ³•
 		
 		Map<Key1, value1> map2=new HashMap<>();
 		Key1 k1=new Key1("Tuesday");
@@ -35,11 +35,11 @@ public class ObjectTest {
 		System.out.println(k1.equals(k2));
 		System.out.println(map2.get(k1));
 		System.out.println(map2.get(k2));
-		//Key1ÀàÖ»ÖØĞ´ÁËequals·½·¨£¬Ã»ÓĞÖØĞ´hashcode·½·¨¡£ËùÒÔ£¬equalsÅĞ¶Ïk1ºÍk2
-		//ÊÇÏàµÈµÄ£¬µ«ÊÇ¼¯ºÏÖĞÊÇÒÔhashcodeÖµÎªÒÀ¾İÈ¡Öµ¡£key1ÀàÖĞÃ»ÓĞÖØĞ´hashcode·½·¨£¬
-		//Ëü»áµ÷ÓÃ¸¸ÀàobjectÀàÖĞµÄhashcode·½·¨¡£¶øÕâ¸ö·½·¨·µ»ØµÄÊÇÓÉµØÖ·Éú³ÉµÄhashcode
-		//£¨µØÖ·²»Í¬£¬hashcodeÖµ²»Í¬£©¡£ËùÒÔ£¬ÓÃk2¾ÍÈ¡²»µ½valµÄÖµ¡£
-		//½áÂÛ£ºÖØĞ´equals·½·¨£¬Ò²±ØĞëÍ¬Ê±ÖØĞ´hashcode·½·¨¡£
+		//Key1ç±»åªé‡å†™äº†equalsæ–¹æ³•ï¼Œæ²¡æœ‰é‡å†™hashcodeæ–¹æ³•ã€‚æ‰€ä»¥ï¼Œequalsåˆ¤æ–­k1å’Œk2
+		//æ˜¯ç›¸ç­‰çš„ï¼Œä½†æ˜¯é›†åˆä¸­æ˜¯ä»¥hashcodeå€¼ä¸ºä¾æ®å–å€¼ã€‚key1ç±»ä¸­æ²¡æœ‰é‡å†™hashcodeæ–¹æ³•ï¼Œ
+		//å®ƒä¼šè°ƒç”¨çˆ¶ç±»objectç±»ä¸­çš„hashcodeæ–¹æ³•ã€‚è€Œè¿™ä¸ªæ–¹æ³•è¿”å›çš„æ˜¯ç”±åœ°å€ç”Ÿæˆçš„hashcode
+		//ï¼ˆåœ°å€ä¸åŒï¼Œhashcodeå€¼ä¸åŒï¼‰ã€‚æ‰€ä»¥ï¼Œç”¨k2å°±å–ä¸åˆ°valçš„å€¼ã€‚
+		//ç»“è®ºï¼šé‡å†™equalsæ–¹æ³•ï¼Œä¹Ÿå¿…é¡»åŒæ—¶é‡å†™hashcodeæ–¹æ³•ã€‚
 	}
 	
 	static class Key1{
@@ -56,12 +56,12 @@ public class ObjectTest {
 				return false;
 			}			
 		}
-		/*@Override//ÖØĞ´hashcode·½·¨
+		/*@Override//é‡å†™hashcodeæ–¹æ³•
 		public int hashCode() {
-			return k.hashCode();//kÄÑµÀ·ÅÔÚ³£Á¿³ØÖĞ£¿£¿
-		}
+			return k.hashCode();//kéš¾é“æ”¾åœ¨å¸¸é‡æ± ä¸­ï¼Ÿï¼Ÿ
+		}*/
 		
-	}*/
+	}
 	
 	static class value1{
 		private int v;
